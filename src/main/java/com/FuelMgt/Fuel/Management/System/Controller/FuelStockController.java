@@ -19,7 +19,7 @@ import com.FuelMgt.Fuel.Management.System.dto.StockRefillRequest;
 @RequestMapping("/api/stock")
 public class FuelStockController {
 	
-	 @Autowired
+	 @Autowired  //It tells the Spring container to automatically provide (inject) an object (bean) that your class depends on.
 	    private FuelStockService service;
 
 	   // @PostMapping("/add")
