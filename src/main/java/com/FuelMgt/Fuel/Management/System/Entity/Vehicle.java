@@ -1,9 +1,13 @@
 package com.FuelMgt.Fuel.Management.System.Entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 public class Vehicle {
@@ -12,10 +16,18 @@ public class Vehicle {
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	    private Long id;
 
+	    @NotBlank(message = "plateNumber is required")
+	    @Column(unique = true)
 	    private String plateNumber;
+	    
+	    
 	    private String model;
 	    private String department;
 	    private String status;
+	    
+	    @ManyToOne  // Table Relationship
+	    @JoinColumn(name = "employee_id")
+	    private Employee employee;
 
 	    //constructor without and with parameter
 	    public Vehicle() {
@@ -72,6 +84,8 @@ public class Vehicle {
 		}
 	    
 	    // getters and setters
+		
+		
 		
 
 }
