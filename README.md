@@ -1,5 +1,7 @@
 Include:
+WE use JSON-LD  Semantic interoperability  at com.FuelMgt.Fuel.Management.System.dto package inside FuelStockJsonLdDTO class
 
+public class FuelStockJsonLdDTO
 Project description
 Features
 Technologies used
