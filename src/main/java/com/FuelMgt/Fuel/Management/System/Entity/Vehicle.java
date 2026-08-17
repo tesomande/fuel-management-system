@@ -12,7 +12,7 @@ import jakarta.validation.constraints.NotBlank;
 @Entity
 public class Vehicle {
 	
-	 @Id
+	 @Id //primary key
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	    private Long id;
 
